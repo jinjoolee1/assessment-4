@@ -1,3 +1,4 @@
+
 module.exports = {
 
     getCompliment: (req, res) => {
@@ -8,6 +9,8 @@ module.exports = {
         // choose random compliment
         let randomIndex = Math.floor(Math.random() * compliments.length);
         let randomCompliment = compliments[randomIndex];
+
+        
       
         res.status(200).send(randomCompliment);
     }
