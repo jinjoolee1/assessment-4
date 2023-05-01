@@ -1,3 +1,4 @@
+const fortunes = require('./db.json');
 
 module.exports = {
 
@@ -18,5 +19,8 @@ module.exports = {
     getFortune: (req, res) => {
         const fortunes = ["We first make our habits, and then our habits make us.", "No one can walk backwards into the future.", "Congratulations! You are on your way.", "Your mind is your greatest asset.", "Your ideals are well within your reach."]
         fortunes.push(getFortune);
+
+
+        res.status(200).send(randomFortune);
     }
 }
