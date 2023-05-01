@@ -8,11 +8,16 @@ app.use(express.json());
 
 const SERVER_PORT = 4000;
 
-const { getCompliment, getFortune } = require('./controller')
+const { getCompliment } = require('./controller')
 
 app.get("/api/compliment", getCompliment);
-app.post("/api/compliment", );
-app.put("/api/compliment:id", );
 
+
+app.listen(4000, () => console.log("Server running on 4000"));
+
+
+const {getFortune} = require('./controller')
+
+app.get("/api/fortune", getFortune);
 
 app.listen(4000, () => console.log("Server running on 4000"));
